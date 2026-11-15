@@ -1,0 +1,243 @@
+{
+  "phrases": [
+    {
+      "latin": "Wel dedew",
+      "arabic": "ول الددو"
+    },
+    {
+      "latin": "Mohamed la98av",
+      "arabic": "محمد لغظف"
+    },
+    {
+      "latin": "Be6 meg3ur",
+      "arabic": "بط مگعور"
+    },
+    {
+      "latin": "Lmnadem",
+      "arabic": "لمنادم"
+    },
+    {
+      "latin": "7anini",
+      "arabic": "حانيني"
+    },
+    {
+      "latin": "Corah mag6o3",
+      "arabic": "كوراه مگطوع"
+    },
+    {
+      "latin": "eywe 3sk mn tjib telefounk",
+      "arabic": "أيو عسك من تجيب تلفونك"
+    },
+    {
+      "latin": "Ane ga3 mngoul mehou chi jyd",
+      "arabic": "ان گاع مانقول ماه شي جيد"
+    },
+    {
+      "latin": "Glt lk 3nkum ma tleytu wa7lin v lgraye , wa7lin 2la v souar",
+      "arabic": "گلت لك عنكم ما تليتو واحلين ف لگراية واحلين الا فالصور"
+    },
+    {
+      "latin": "4e glt 39lak elli ngoulk 4ak elyn i3oudou yndrbou vih b chi vydtou",
+      "arabic": "ذا گللت عقلك اللي نگولك  ذاك إلين يعودو ينضربو فيه ب شي بفايدتو"
+    },
+    {
+      "latin": "Pardon li 3ando devoir qsm li jab sidi ymchih ?",
+      "arabic": "بردوه  للي عندو دفوار للي جاب سيدي يمشيه"
+    },
+    {
+      "latin": "M7md Y7y Nt leyhi tktb ktab !!!",
+      "arabic": "محمد يحي انت لاهي تكتب كتاب"
+    },
+    {
+      "latin": "7l9t murad 3almdar",
+      "arabic": "حلقة موراد عالمدار"
+    },
+    {
+      "latin": "Glt lk 3nkum ma tleytu wa7lin v lgraye",
+      "arabic": "گلت لك عنكم ما تليتو واحلين ف لگراية"
+    },
+    {
+      "latin": "wa7lin 2la v souar",
+      "arabic": "واحلين الا فالصور"
+    },
+    {
+      "latin": "v souar",
+      "arabic": "فالصور"
+    },
+    {
+      "latin": "Pardon li 3ando devoir qsm li jab sidi ymchih",
+      "arabic": "بردوه  للي عندو دفوار للي جاب سيدي يمشيه"
+    },
+    {
+      "latin": "M7md Y7y Nt leyhi tktb ktab",
+      "arabic": "محمد يحي انت لاهي تكتب كتاب"
+    }
+  ],
+  "words": {
+    "wel": [
+      "ول"
+    ],
+    "dedew": [
+      "الددو"
+    ],
+    "mohamed": [
+      "محمد"
+    ],
+    "la98av": [
+      "لغظف"
+    ],
+    "be6": [
+      "بط"
+    ],
+    "meg3ur": [
+      "مگعور"
+    ],
+    "lmnadem": [
+      "لمنادم"
+    ],
+    "7anini": [
+      "حانيني"
+    ],
+    "corah": [
+      "كوراه"
+    ],
+    "mag6o3": [
+      "مگطوع"
+    ],
+    "eywe": [
+      "أيو"
+    ],
+    "3sk": [
+      "عسك"
+    ],
+    "mn": [
+      "من"
+    ],
+    "tjib": [
+      "تجيب"
+    ],
+    "telefounk": [
+      "تلفونك"
+    ],
+    "ane": [
+      "ان"
+    ],
+    "ga3": [
+      "گاع"
+    ],
+    "mngoul": [
+      "مانقول"
+    ],
+    "mehou": [
+      "ماه"
+    ],
+    "chi": [
+      "شي"
+    ],
+    "jyd": [
+      "جيد"
+    ],
+    "glt": [
+      "گلت"
+    ],
+    "lk": [
+      "لك"
+    ],
+    "3nkum": [
+      "عنكم"
+    ],
+    "ma": [
+      "ما"
+    ],
+    "tleytu": [
+      "تليتو"
+    ],
+    "wa7lin": [
+      "واحلين"
+    ],
+    "lgraye": [
+      "لگراية"
+    ],
+    "2la": [
+      "الا"
+    ],
+    "4e": [
+      "ذا"
+    ],
+    "39lak": [
+      "عقلك"
+    ],
+    "elli": [
+      "اللي"
+    ],
+    "ngoulk": [
+      "نگولك"
+    ],
+    "4ak": [
+      "ذاك"
+    ],
+    "elyn": [
+      "إلين"
+    ],
+    "i3oudou": [
+      "يعودو"
+    ],
+    "yndrbou": [
+      "ينضربو"
+    ],
+    "vih": [
+      "فيه"
+    ],
+    "vydtou": [
+      "بفايدتو"
+    ],
+    "pardon": [
+      "بردوه"
+    ],
+    "3ando": [
+      "عندو"
+    ],
+    "devoir": [
+      "دفوار"
+    ],
+    "jab": [
+      "جاب"
+    ],
+    "sidi": [
+      "سيدي"
+    ],
+    "ymchih": [
+      "يمشيه"
+    ],
+    "m7md": [
+      "محمد"
+    ],
+    "y7y": [
+      "يحي"
+    ],
+    "nt": [
+      "انت"
+    ],
+    "leyhi": [
+      "لاهي"
+    ],
+    "tktb": [
+      "تكتب"
+    ],
+    "ktab": [
+      "كتاب"
+    ],
+    "7l9t": [
+      "حلقة"
+    ],
+    "murad": [
+      "موراد"
+    ],
+    "3almdar": [
+      "عالمدار"
+    ],
+    "souar": [
+      "الصور"
+    ]
+  }
+}
