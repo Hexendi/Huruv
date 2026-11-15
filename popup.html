@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #ffffff;
+        color: #17162b;
+        font-family: "Thmanyah Sans", "Kufam", "Reem Kufi", "Noto Sans Arabic", system-ui, sans-serif;
+      }
+    </style>
+    <title>Huruv</title>
+    <link rel="icon" href="./icons/icon-32.png" />
+  </head>
+  <body class="popup popup-wide">
+    <div class="app-shell popup-app">
+      <aside class="app-sidebar" aria-label="قائمة Huruv">
+        <a class="sidebar-brand" href="#" aria-label="Huruv">
+          <img class="brand-logo" src="./icons/logo-256.png" alt="Huruv" width="44" height="44" />
+        </a>
+        <nav class="side-nav" aria-label="أقسام Huruv">
+          <button type="button" class="side-nav-item is-active" data-tab="convert" aria-current="page" title="تحويل">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h10M10 3l4 4-4 4M20 17H10M14 13l-4 4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+          </button>
+          <button type="button" class="side-nav-item" data-tab="keyboard" title="لوحة مفاتيح عربية">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="8" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.6" fill="none" />
+              <circle cx="7" cy="12" r="1" fill="currentColor" />
+              <circle cx="10" cy="12" r="1" fill="currentColor" />
+              <circle cx="13" cy="12" r="1" fill="currentColor" />
+              <circle cx="16" cy="12" r="1" fill="currentColor" />
+              <circle cx="8" cy="15" r="1" fill="currentColor" />
+              <circle cx="11" cy="15" r="1" fill="currentColor" />
+              <circle cx="14" cy="15" r="1" fill="currentColor" />
+              <circle cx="17" cy="15" r="1" fill="currentColor" />
+            </svg>
+          </button>
+          <button type="button" class="side-nav-item" data-tab="rules" title="قواعد وقاموس">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <path d="M9 7h7M9 11h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+          </button>
+        </nav>
+        <div class="side-nav-bottom">
+          <button type="button" class="side-nav-item" id="open-repo" title="GitHub">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+          </button>
+        </div>
+      </aside>
+      <main class="app-main popup-main">
+        <section class="popup-panel" data-view="convert">
+          <header class="popup-panel-header">
+            <div>
+              <h1 class="popup-panel-title">تحويل لاتيني → عربي</h1>
+              <p class="popup-panel-sub">يعمل تلقائياً في أي حقل كتابة</p>
+            </div>
+            <button type="button" class="switch" id="enabled-toggle" role="switch" aria-checked="true">
+              <span class="switch-thumb"></span>
+            </button>
+          </header>
+
+          <section class="status-card" id="status-card" data-state="on">
+            <div class="status-main">
+              <div class="status-copy">
+                <p class="status-kicker">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  <span id="status-kicker">مفعل</span>
+                </p>
+                <h2 class="status-title" id="status-title">Huruv مفعل</h2>
+                <p class="status-detail" id="status-detail">يحوّل الكلمة عند المسافة أو علامة الترقيم أو Enter</p>
+              </div>
+            </div>
+            <div class="example">
+              <span class="example-label">مثال</span>
+              <span class="example-latin">salam</span>
+              <span class="example-arrow" aria-hidden="true">←</span>
+              <span class="example-arabic" lang="ar" dir="rtl">سلام</span>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-head">
+              <h2 class="panel-title">الوضع</h2>
+            </div>
+            <fieldset class="segmented" id="mode-group">
+              <legend class="sr-only">نمط التحويل</legend>
+              <label>
+                <input type="radio" name="mode" value="automatic" />
+                <span>تلقائي</span>
+              </label>
+              <label>
+                <input type="radio" name="mode" value="preview" />
+                <span>معاينة</span>
+              </label>
+              <label>
+                <input type="radio" name="mode" value="suggestions" />
+                <span>اقتراحات</span>
+              </label>
+            </fieldset>
+            <p class="help mode-description" id="mode-description"></p>
+          </section>
+
+          <label class="option-row">
+            <span class="option-row-label">
+              <span class="option-row-title">أرقام الدردشة</span>
+            </span>
+            <input type="checkbox" id="chat-numbers" class="toggle-input" />
+            <span class="toggle" aria-hidden="true"></span>
+          </label>
+
+          <section class="site-panel" id="site-panel" hidden>
+            <div class="site-copy">
+              <span class="site-title">إيقاف Huruv في هذا الموقع</span>
+              <span class="site-host" id="site-host"></span>
+            </div>
+            <label class="site-toggle">
+              <input type="checkbox" id="site-pause" class="toggle-input" />
+              <span class="toggle" aria-hidden="true"></span>
+            </label>
+          </section>
+
+          <button type="button" class="undo-button" id="undo-button">
+            <span>تراجع عن آخر تحويل</span>
+            <span class="shortcut"><kbd>Alt</kbd><kbd>Z</kbd></span>
+          </button>
+          <p class="popup-note" id="popup-note" role="status" hidden></p>
+        </section>
+
+        <section class="popup-panel" data-view="keyboard" hidden>
+          <header class="popup-panel-header">
+            <div>
+              <h1 class="popup-panel-title">لوحة مفاتيح عربية</h1>
+              <p class="popup-panel-sub">اكتب مباشرةً وحوّلها أو انسخها</p>
+            </div>
+          </header>
+
+          <fieldset class="keyboard-mode-group" id="kbd-mode-group">
+            <legend class="kbd-mode-legend">موضع اللوحة</legend>
+            <label class="kbd-mode-option">
+              <input type="radio" name="kbd-mode" value="inline" checked />
+              <span>
+                <strong>داخل المنبثقة</strong>
+                <small>تظهر هنا فقط</small>
+              </span>
+            </label>
+            <label class="kbd-mode-option">
+              <input type="radio" name="kbd-mode" value="floating" />
+              <span>
+                <strong>عائمة أسفل الشاشة</strong>
+                <small>في الصفحة، ويمكن سحبها</small>
+              </span>
+            </label>
+          </fieldset>
+
+          <p class="floating-hint" id="kbd-mode-hint"></p>
+
+          <div class="keyboard-output">
+            <textarea id="arabic-keyboard-input" class="keyboard-textarea" spellcheck="false" placeholder="اكتب هنا..."></textarea>
+            <div class="keyboard-actions">
+              <button type="button" class="kbd-action" id="kbd-copy">نسخ</button>
+              <button type="button" class="kbd-action" id="kbd-clear">مسح</button>
+              <button type="button" class="kbd-action" id="kbd-insert">إدراج في الصفحة النشطة</button>
+            </div>
+          </div>
+
+          <div class="arabic-keyboard" id="arabic-keyboard"></div>
+        </section>
+
+        <section class="popup-panel" data-view="rules" hidden>
+          <header class="popup-panel-header">
+            <div>
+              <h1 class="popup-panel-title">قواعد وقاموس</h1>
+              <p class="popup-panel-sub">خصّص التحويل لكلماتك ولهجتك</p>
+            </div>
+          </header>
+
+          <div class="config-block">
+            <label class="field-label" for="custom-rules">قواعد مخصصة</label>
+            <p class="help">
+              سطر لكل قاعدة بصيغة <code>latin =&gt; arabic</code>. القواعد المخصصة
+              تتجاوز المدمجة، والأسطر غير الصالحة تُتجاهل.
+            </p>
+            <textarea
+              class="textarea config-textarea"
+              id="custom-rules"
+              dir="ltr"
+              spellcheck="false"
+              autocomplete="off"
+              placeholder="ch =&gt; ش&#10;kh =&gt; خ&#10;7 =&gt; ح"
+            ></textarea>
+            <ul class="error-list" id="rules-errors" hidden></ul>
+            <p class="success-line" id="rules-summary"></p>
+          </div>
+
+          <div class="config-block">
+            <label class="field-label" for="custom-dictionary">كلمات مخصصة</label>
+            <p class="help">
+              التهجئة الأولى تُدرج افتراضياً، والبقية تظهر كاقتراحات. افصل بينها
+              بـ <code>|</code>.
+            </p>
+            <textarea
+              class="textarea config-textarea"
+              id="custom-dictionary"
+              dir="ltr"
+              spellcheck="false"
+              autocomplete="off"
+              placeholder="marhba = مرحبا | مرحباً&#10;sabah el khir = صباح الخير"
+            ></textarea>
+            <ul class="error-list" id="dictionary-errors" hidden></ul>
+            <p class="success-line" id="dictionary-summary"></p>
+          </div>
+
+          <label class="option-row">
+            <span class="option-row-label">
+              <span class="option-row-title">تجاهل الكلمات الإنجليزية الشائعة</span>
+              <span class="option-row-sub">
+                يترك the وand وhello كما هي، مع إبقاء 3la و7na فعّالة.
+              </span>
+            </span>
+            <input type="checkbox" id="skip-english" class="toggle-input" />
+            <span class="toggle" aria-hidden="true"></span>
+          </label>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./src/popup/index.ts"></script>
+  </body>
+</html>
