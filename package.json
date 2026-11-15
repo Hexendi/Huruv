@@ -1,0 +1,24 @@
+{
+  "name": "huruv",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "description": "Type Arabic with a Latin keyboard. A local-first Arabic transliteration browser extension.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build && vite build --config vite.content.config.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "icons": "python3 scripts/build-icons.py",
+    "check": "npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.5",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
+    "vitest": "^5.0.5"
+  }
+}
